@@ -1,0 +1,16 @@
+{
+  "name": "nfactorial-homework-0610-npm",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "addToGit": "git add . && git commit -m \"Test commit messsage\" && git push"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^5.0.1"
+  }
+}
