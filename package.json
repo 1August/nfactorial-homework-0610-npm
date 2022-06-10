@@ -8,8 +8,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "addGit": "git add .",
     "commitGit": "git commit -m",
-    "addAndCommitGit": "npm run addGit && npm run commitGit",
-    "pushGit": "npm run addAndCommitGit -- \"Message\"  && git push"
+    "addAndCommitGit": "npm run addGit && npm run commitGit -msg",
+    "pushGit": "npm run addAndCommitGit -msgs && git push",
+    "testGitPush": "git add . && git commit -m"
   },
   "author": "",
   "license": "ISC",
