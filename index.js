@@ -1,6 +1,6 @@
-import chalk from "chalk"
+// import chalk from "chalk"
+import 'dotenv/config'
 
 
 
-console.log(chalk.bold.bgRed.greenBright('hello'))
-
+console.log(process.env.PORT)

@@ -6,11 +6,15 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "addToGit": "git add . && git commit -m \"Test commit messsage\" && git push"
+    "addGit": "git add .",
+    "commitGit": "git commit -m",
+    "addAndCommitGit": "npm run addGit && npm run commitGit",
+    "pushGit": "npm run addAndCommitGit && git push"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "chalk": "^5.0.1"
+    "chalk": "^5.0.1",
+    "dotenv": "^16.0.1"
   }
 }
