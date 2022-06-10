@@ -9,7 +9,7 @@
     "addGit": "git add .",
     "commitGit": "git commit -m",
     "addAndCommitGit": "npm run addGit && npm run commitGit",
-    "pushGit": "npm run addAndCommitGit && git push"
+    "pushGit": "npm run addAndCommitGit -- \"Message\"  && git push"
   },
   "author": "",
   "license": "ISC",
