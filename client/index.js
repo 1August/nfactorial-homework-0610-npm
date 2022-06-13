@@ -82,9 +82,13 @@ const getColorsSet = color => ({
 const setInitialColor = () => {
     const session = sessionStorage.getItem('user-color') ?? null
     const local = localStorage.getItem('user-color') ?? null
-    console.log(local)
-    if (!session) console.log('no session')
-    setColors(getColorsSet(local ?? '#acacac'))
+    const cookies = document.cookie
+    const colorIdx = cookies?.indexOf('color=') + 6
+    const cookie = cookies?.substring(colorIdx).length === 0 ? null : cookies.substring(colorIdx)
+    const colorChoice = session ?? cookie ?? local ?? '#acacac'
+    const setThisColor = getColorsSet(colorChoice)
+    setColors(setThisColor)
+    colorPicker.value = colorChoice
 }
 setInitialColor()
 
@@ -112,13 +116,21 @@ const setSession = color => {
 const setLocal = color => {
     localStorage.setItem('user-color', color)
 }
+/**
+ * Set Cookie
+ * @param color
+ */
+const setCookie = color => {
+    const date = new Date('06/22/2022')
+    document.cookie = `color=${color}; expires=${date}`
+}
 
 // Events
 randomColorBtn.addEventListener('click', () => setColorAndSave(getRandomColor(), setLocal))
-colorPicker.addEventListener('change', e => setColorAndSave(e.target.value, setLocal))
+colorPicker.addEventListener('change', e => setColorAndSave(e.target.value, setSession))
 form.addEventListener('submit', e => {
     e.preventDefault()
     const inputVal = form.querySelector('input').value
     if (!inputVal) return
-    setColorAndSave(inputVal, setSession)
+    setColorAndSave(inputVal, setCookie)
 })

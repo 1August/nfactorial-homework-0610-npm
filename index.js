@@ -1,6 +1,3 @@
-// import chalk from "chalk"
-import 'dotenv/config'
+import chalk from "chalk"
 
-
-
-console.log(process.env.PORT)
+console.log(chalk.red('Hello'))

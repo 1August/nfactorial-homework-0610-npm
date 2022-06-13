@@ -6,11 +6,6 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "addGit": "git add .",
-    "commitGit": "git commit -m",
-    "pushGit": "git push",
-    "addNCommitGit": "git add . && git commit -m \"$msg\"  && git push -u origin master",
-
     "git": "git add . && git commit -m",
     "postgit": "git push --all"
   },
