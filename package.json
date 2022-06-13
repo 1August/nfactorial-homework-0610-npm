@@ -9,7 +9,10 @@
     "addGit": "git add .",
     "commitGit": "git commit -m",
     "pushGit": "git push",
-    "addNCommitGit": "npm run addGit && npm run commitGit sys.avgv[1] && git push"
+    "addNCommitGit": "git add . && git commit -m \"$msg\"  && git push -u origin master",
+
+    "git": "git add . && git commit -m",
+    "postgit": "git push --all"
   },
   "author": "",
   "license": "ISC",
