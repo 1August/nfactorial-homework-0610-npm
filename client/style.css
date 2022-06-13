@@ -13,7 +13,7 @@ body{
 }
 
 
-button{
+.randomColor{
     color: var(--darker-color);
 
     padding: 1rem;
@@ -25,5 +25,9 @@ button{
 }
 
 button:hover{
+    background-color: #acacac;
+}
 
+form{
+    padding: 2rem;
 }

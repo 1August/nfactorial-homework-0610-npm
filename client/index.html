@@ -12,16 +12,19 @@
 <body>
 <main>
     <div class="setRandom">
-        <button>Get random background</button>
+        <button class="randomColor">Get random background</button>
     </div>
     <div class="setOwn">
         <h1>Set your own</h1>
+        <label for="color">Color</label>
+        <input id="color" type="color">
+    </div>
+    <div class="setWithInput">
         <form>
-            <label for="color">Color</label>
-            <input id="color" type="color">
+            <input type="text" placeholder="HEX(#fafafa)">
+            <button type="submit" class="changeTextColor">Change color</button>
         </form>
     </div>
 </main>
-
 </body>
 </html>
